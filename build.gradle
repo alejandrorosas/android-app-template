@@ -2,6 +2,7 @@ buildscript {
     ext.kotlin_version = '1.4.21'
     ext.dagger_version = '2.31.2'
     ext.hilt_version = "$dagger_version-alpha"
+    ext.compose_version = "1.0.0-alpha09"
 
     repositories {
         google()
@@ -9,7 +10,7 @@ buildscript {
     }
 
     dependencies {
-        classpath "com.android.tools.build:gradle:4.1.2"
+        classpath "com.android.tools.build:gradle:7.0.0-alpha05"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath "com.google.dagger:hilt-android-gradle-plugin:$hilt_version"
     }
@@ -21,6 +22,13 @@ allprojects {
     repositories {
         google()
         jcenter()
+    }
+
+    tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).configureEach {
+        kotlinOptions {
+            jvmTarget = "1.8"
+            useIR = true
+        }
     }
 }
 
@@ -36,6 +44,15 @@ subprojects {
                     targetSdkVersion 30
 
                     testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+                }
+
+                buildFeatures {
+                    compose true
+                }
+
+                composeOptions {
+                    kotlinCompilerVersion rootProject.kotlin_version
+                    kotlinCompilerExtensionVersion rootProject.compose_version
                 }
             }
         }

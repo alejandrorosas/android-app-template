@@ -17,4 +17,11 @@ ext {
 
     androidTestJunit = "androidx.test.ext:junit:1.1.2"
     androidTestEspresso = "androidx.test.espresso:espresso-core:3.3.0"
+
+    // Compose
+    composeUi = "androidx.compose.ui:ui:$compose_version"
+    composeUiLivedata = "androidx.compose.runtime:runtime-livedata:$compose_version"
+    composeUiTooling = "androidx.compose.ui:ui-tooling:$compose_version"
+    composeMaterial = "androidx.compose.material:material:$compose_version"
+    composeNavigation = "androidx.navigation:navigation-compose:1.0.0-alpha04"
 }

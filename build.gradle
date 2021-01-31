@@ -1,8 +1,8 @@
 buildscript {
-    ext.kotlin_version = '1.4.21'
+    ext.kotlin_version = '1.4.21-2'
     ext.dagger_version = '2.31.2'
     ext.hilt_version = "$dagger_version-alpha"
-    ext.compose_version = "1.0.0-alpha09"
+    ext.compose_version = "1.0.0-alpha11"
 
     repositories {
         google()
@@ -37,7 +37,7 @@ subprojects {
         if (project.hasProperty('android')) {
             android {
                 compileSdkVersion 30
-                buildToolsVersion "30.0.2"
+                buildToolsVersion "30.0.3"
 
                 defaultConfig {
                     minSdkVersion 23

@@ -1,11 +1,13 @@
 package dev.alejandrorosas.featuretemplate.ui
 
-import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 
-class FeatureTemplateViewModel @ViewModelInject constructor(
+@HiltViewModel
+class FeatureTemplateViewModel @Inject constructor(
 //    val initialCounter: Int
 ) : ViewModel() {
     private var _counter = MutableLiveData(0)

@@ -12,6 +12,7 @@ ext {
     hiltCompiler = "com.google.dagger:hilt-compiler:$hilt_version"
     androidXHilt = "androidx.hilt:hilt-lifecycle-viewmodel:$hiltAndroidXVersion"
     androidXHiltCompiler = "androidx.hilt:hilt-compiler:$hiltAndroidXVersion"
+    androidXHiltNavigation = "androidx.hilt:hilt-navigation:$hiltAndroidXVersion"
 
     junit = "junit:junit:4.13.1"
 

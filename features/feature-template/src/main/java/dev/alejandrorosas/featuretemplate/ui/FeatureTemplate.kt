@@ -40,7 +40,7 @@ fun Screen(featureTemplateViewModel: FeatureTemplateViewModel = viewModel(), onN
                     },
                     navigationIcon = {
                         IconButton(onClick = { onNavigateBack() }) {
-                            Icon(Icons.Filled.ArrowBack)
+                            Icon(Icons.Filled.ArrowBack, contentDescription = null)
                         }
                     },
                 )
@@ -48,7 +48,7 @@ fun Screen(featureTemplateViewModel: FeatureTemplateViewModel = viewModel(), onN
             floatingActionButton = {
                 FloatingActionButton(onClick = { }) {
                     IconButton(onClick = { featureTemplateViewModel.onCounterClick() }) {
-                        Icon(Icons.Filled.Add)
+                        Icon(Icons.Filled.Add, contentDescription = null)
                     }
                 }
             },

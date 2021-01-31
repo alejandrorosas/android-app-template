@@ -42,8 +42,6 @@ subprojects {
                 defaultConfig {
                     minSdkVersion 23
                     targetSdkVersion 30
-
-                    testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
                 }
 
                 buildFeatures {
@@ -51,7 +49,6 @@ subprojects {
                 }
 
                 composeOptions {
-                    kotlinCompilerVersion rootProject.kotlin_version
                     kotlinCompilerExtensionVersion rootProject.compose_version
                 }
             }

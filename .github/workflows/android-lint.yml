@@ -3,7 +3,7 @@ on: push
 jobs:
   build:
     runs-on: ubuntu-latest
-    container: alejandrorosas/android:latest
+    container: alejandrorosas/android:java11
     steps:
       - uses: actions/checkout@v2
       - name: Lint

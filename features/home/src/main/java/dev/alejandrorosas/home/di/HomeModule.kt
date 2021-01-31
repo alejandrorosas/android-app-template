@@ -1,6 +1,5 @@
 package dev.alejandrorosas.home.di
 
-import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.composable

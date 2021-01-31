@@ -16,8 +16,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import androidx.navigation.compose.navigate
-import dev.alejandrorosas.home.R
 import dev.alejandrorosas.core.ui.AppTheme
+import dev.alejandrorosas.home.R
 
 @Composable
 fun Home(navController: NavController) {
@@ -51,7 +51,9 @@ fun ScreenContent(onButtonClick: () -> Unit) {
     ) {
         Button(
             onClick = { onButtonClick() },
-            modifier = Modifier.align(Alignment.CenterVertically).fillMaxWidth()
+            modifier = Modifier
+                .align(Alignment.CenterVertically)
+                .fillMaxWidth()
         ) {
             Text("Navigate to Feature")
         }

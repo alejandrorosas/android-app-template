@@ -4,13 +4,15 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
+import dev.alejandrorosas.featuretemplate.di.FeatureTemplateModule.Constants.INITIAL_COUNTER
 import javax.inject.Inject
+import javax.inject.Named
 
 @HiltViewModel
 class FeatureTemplateViewModel @Inject constructor(
-//    val initialCounter: Int
+    @Named(INITIAL_COUNTER) val initialCounter: Int
 ) : ViewModel() {
-    private var _counter = MutableLiveData(0)
+    private var _counter = MutableLiveData(initialCounter)
     val counter: LiveData<Int> = _counter
 
     fun onCounterClick() {

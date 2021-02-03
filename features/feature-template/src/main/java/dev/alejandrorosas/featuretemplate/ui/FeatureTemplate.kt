@@ -17,19 +17,29 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.AmbientContext
+import androidx.compose.ui.platform.AmbientViewModelStoreOwner
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.viewinterop.viewModel
+import androidx.hilt.navigation.HiltViewModelFactory
+import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.NavBackStackEntry
 import androidx.navigation.NavController
 import dev.alejandrorosas.core.ui.AppTheme
 
 @Composable
 fun FeatureTemplate(navController: NavController) {
-    Screen { navController.popBackStack() }
+    // Temporary until hilt-navigation-compose is released
+    // https://android-review.googlesource.com/c/platform/frameworks/support/+/1551264
+    val viewModel = ViewModelProvider(
+        AmbientViewModelStoreOwner.current,
+        HiltViewModelFactory(AmbientContext.current, AmbientViewModelStoreOwner.current as NavBackStackEntry)
+    ).get(FeatureTemplateViewModel::class.java)
+    Screen(viewModel) { navController.popBackStack() }
 }
 
 @Composable
-fun Screen(featureTemplateViewModel: FeatureTemplateViewModel = viewModel(), onNavigateBack: () -> Unit) {
+fun Screen(featureTemplateViewModel: FeatureTemplateViewModel, onNavigateBack: () -> Unit) {
     val counter: Int by featureTemplateViewModel.counter.observeAsState(0)
     AppTheme {
         Scaffold(
@@ -60,11 +70,17 @@ fun Screen(featureTemplateViewModel: FeatureTemplateViewModel = viewModel(), onN
 
 @Composable
 fun ScreenContent(count: Int) {
-    Row(modifier = Modifier.fillMaxHeight().fillMaxWidth()) {
+    Row(
+        modifier = Modifier
+            .fillMaxHeight()
+            .fillMaxWidth()
+    ) {
         Text(
             text = "FAB has been clicked $count times",
             textAlign = TextAlign.Center,
-            modifier = Modifier.align(Alignment.CenterVertically).fillMaxWidth(),
+            modifier = Modifier
+                .align(Alignment.CenterVertically)
+                .fillMaxWidth(),
         )
     }
 }
@@ -72,5 +88,5 @@ fun ScreenContent(count: Int) {
 @Preview
 @Composable
 fun DefaultPreview() {
-    Screen { }
+//    Screen { }
 }

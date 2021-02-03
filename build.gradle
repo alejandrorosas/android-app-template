@@ -1,6 +1,6 @@
 buildscript {
-    ext.kotlin_version = '1.4.21-2'
-    ext.dagger_version = '2.31.2'
+    ext.kotlin_version = "1.4.21-2"
+    ext.dagger_version = "2.31.2"
     ext.hilt_version = "$dagger_version-alpha"
     ext.compose_version = "1.0.0-alpha11"
 
@@ -34,7 +34,7 @@ allprojects {
 
 subprojects {
     afterEvaluate { project ->
-        if (project.hasProperty('android')) {
+        if (project.hasProperty("android")) {
             android {
                 compileSdkVersion 30
                 buildToolsVersion "30.0.3"
@@ -56,7 +56,7 @@ subprojects {
     }
 }
 
-apply from: 'dependencies.gradle'
+apply from: "dependencies.gradle"
 
 task clean(type: Delete) {
     delete rootProject.buildDir

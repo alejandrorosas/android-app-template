@@ -16,22 +16,34 @@ android {
     buildTypes {
         release {
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            proguardFiles getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
         }
+    }
+
+    buildFeatures {
+        compose true
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion rootProject.compose_version
     }
 }
 
 dependencies {
-    implementation project(':core')
-    implementation project(':features:feature-template')
+    implementation project(":core")
+    implementation project(":features:home")
+    implementation project(":features:feature-template")
 
     implementation rootProject.ext.kotlin
     implementation rootProject.ext.appcompat
     implementation rootProject.ext.core
-    implementation rootProject.ext.constraintLayout
     implementation rootProject.ext.dagger
     implementation rootProject.ext.hilt
     implementation rootProject.ext.androidXHilt
+    implementation rootProject.ext.androidXHiltNavigation
+
+    implementation rootProject.ext.composeUi
+    implementation rootProject.ext.composeNavigation
 
     kapt rootProject.ext.daggerCompiler
     kapt rootProject.ext.hiltCompiler

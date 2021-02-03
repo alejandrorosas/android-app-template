@@ -8,6 +8,11 @@ dependencies {
     implementation rootProject.ext.dagger
     implementation rootProject.ext.hilt
 
+    implementation rootProject.ext.composeUi
+    implementation rootProject.ext.composeUiTooling
+    implementation rootProject.ext.composeMaterial
+    implementation rootProject.ext.composeNavigation
+
     kapt rootProject.ext.daggerCompiler
     kapt rootProject.ext.hiltCompiler
 

@@ -24,5 +24,5 @@ ext {
     composeUiLivedata = "androidx.compose.runtime:runtime-livedata:$compose_version"
     composeUiTooling = "androidx.compose.ui:ui-tooling:$compose_version"
     composeMaterial = "androidx.compose.material:material:$compose_version"
-    composeNavigation = "androidx.navigation:navigation-compose:1.0.0-alpha06"
+    composeNavigation = "androidx.navigation:navigation-compose:1.0.0-alpha07"
 }

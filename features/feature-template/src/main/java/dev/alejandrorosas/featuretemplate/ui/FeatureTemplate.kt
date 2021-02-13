@@ -17,12 +17,12 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.AmbientContext
-import androidx.compose.ui.platform.AmbientViewModelStoreOwner
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.hilt.navigation.HiltViewModelFactory
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.viewmodel.compose.LocalViewModelStoreOwner
 import androidx.navigation.NavBackStackEntry
 import androidx.navigation.NavController
 import dev.alejandrorosas.core.ui.AppTheme
@@ -32,8 +32,8 @@ fun FeatureTemplate(navController: NavController) {
     // Temporary until hilt-navigation-compose is released
     // https://android-review.googlesource.com/c/platform/frameworks/support/+/1551264
     val viewModel = ViewModelProvider(
-        AmbientViewModelStoreOwner.current,
-        HiltViewModelFactory(AmbientContext.current, AmbientViewModelStoreOwner.current as NavBackStackEntry)
+        LocalViewModelStoreOwner.current,
+        HiltViewModelFactory(LocalContext.current, LocalViewModelStoreOwner.current as NavBackStackEntry),
     ).get(FeatureTemplateViewModel::class.java)
     Screen(viewModel) { navController.popBackStack() }
 }

@@ -1,7 +1,5 @@
 package dev.alejandrorosas.featuretemplate.di
 
-import androidx.navigation.NavController
-import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.composable
 import dagger.Module
 import dagger.Provides
@@ -17,16 +15,9 @@ import javax.inject.Named
 class FeatureTemplateModule {
     @Provides
     @IntoSet
-    fun provideFeatureTemplateNavigation(): Navigation {
-        return object : Navigation {
-            override fun compose(
-                navGraphBuilder: NavGraphBuilder,
-                navController: NavController,
-            ) {
-                navGraphBuilder.composable("feature_template") {
-                    FeatureTemplate(navController)
-                }
-            }
+    fun provideFeatureTemplateNavigation() = Navigation { navController ->
+        composable("feature_template") {
+            FeatureTemplate(navController)
         }
     }
 

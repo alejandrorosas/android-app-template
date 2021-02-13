@@ -1,7 +1,5 @@
 package dev.alejandrorosas.home.di
 
-import androidx.navigation.NavController
-import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.composable
 import dagger.Module
 import dagger.Provides
@@ -22,16 +20,9 @@ class HomeModule {
 
     @Provides
     @IntoSet
-    fun provideHomeNavigation(): Navigation {
-        return object : Navigation {
-            override fun compose(
-                navGraphBuilder: NavGraphBuilder,
-                navController: NavController,
-            ) {
-                navGraphBuilder.composable("home") {
-                    Home(navController)
-                }
-            }
+    fun provideHomeNavigation() = Navigation { navController ->
+        composable("home") {
+            Home(navController)
         }
     }
 }

@@ -21,7 +21,6 @@ class FeatureTemplateModule {
         }
     }
 
-
     @Provides
     @Named(INITIAL_COUNTER)
     fun provideInitialCounter(): Int {

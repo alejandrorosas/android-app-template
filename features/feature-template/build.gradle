@@ -6,7 +6,6 @@ apply plugin: 'dagger.hilt.android.plugin'
 dependencies {
     implementation project(":core")
 
-    implementation rootProject.ext.appcompat
     implementation rootProject.ext.core
     implementation rootProject.ext.dagger
     implementation rootProject.ext.hilt
@@ -18,6 +17,7 @@ dependencies {
     implementation rootProject.ext.composeUiTooling
     implementation rootProject.ext.composeMaterial
     implementation rootProject.ext.composeNavigation
+    implementation rootProject.ext.viewmodelCompose
 
     kapt rootProject.ext.daggerCompiler
     kapt rootProject.ext.hiltCompiler

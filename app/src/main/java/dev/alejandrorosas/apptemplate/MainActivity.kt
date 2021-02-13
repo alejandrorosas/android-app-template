@@ -1,8 +1,8 @@
 package dev.alejandrorosas.apptemplate
 
 import android.os.Bundle
+import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
-import androidx.compose.ui.platform.setContent
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.rememberNavController
 import dagger.hilt.android.AndroidEntryPoint
@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
         setContent {
             val navController = rememberNavController()
             NavHost(navController = navController, startDestination = initialRoute) {
-                navigationSet.forEach { it.compose(this, navController) }
+                navigationSet.forEach { it.prepare(this, navController) }
             }
         }
     }

@@ -14,7 +14,7 @@ ext {
     androidXHiltCompiler = "androidx.hilt:hilt-compiler:$hiltAndroidXVersion"
     androidXHiltNavigation = "androidx.hilt:hilt-navigation:$hiltAndroidXVersion"
 
-    junit = "junit:junit:4.13.1"
+    junit = "junit:junit:4.13.2"
 
     androidTestJunit = "androidx.test.ext:junit:1.1.2"
     androidTestEspresso = "androidx.test.espresso:espresso-core:3.3.0"

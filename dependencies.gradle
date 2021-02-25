@@ -26,7 +26,7 @@ ext {
     composeMaterial = "androidx.compose.material:material:$compose_version"
     composeNavigation = [
             "androidx.navigation:navigation-compose:1.0.0-alpha07",
-            "androidx.activity:activity-compose:1.3.0-alpha02", // Temporary dependency to fix resolution of broken alpha01
+            "androidx.activity:activity-compose:1.3.0-alpha03", // Temporary dependency to fix resolution of broken alpha01
     ]
     viewmodelCompose = "androidx.lifecycle:lifecycle-viewmodel-compose:1.0.0-alpha01"
 }

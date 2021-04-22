@@ -9,7 +9,6 @@ dependencies {
     implementation rootProject.ext.core
     implementation rootProject.ext.dagger
     implementation rootProject.ext.hilt
-    implementation rootProject.ext.androidXHilt
     implementation rootProject.ext.androidXHiltNavigationCompose
 
     implementation rootProject.ext.composeUi

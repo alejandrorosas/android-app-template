@@ -2,7 +2,7 @@ buildscript {
     ext.kotlin_version = "1.4.31"
     ext.dagger_version = "2.34.1"
     ext.hilt_version = "$dagger_version-beta"
-    ext.compose_version = "1.0.0-beta04"
+    ext.compose_version = "1.0.0-beta05"
 
     repositories {
         google()

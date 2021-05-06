@@ -10,7 +10,7 @@ ext {
     hilt = "com.google.dagger:hilt-android:$dagger_version"
     hiltCompiler = "com.google.dagger:hilt-compiler:$dagger_version"
 
-    hiltAndroidXVersion = "1.0.0-beta01"
+    hiltAndroidXVersion = "1.0.0"
     androidXHiltCompiler = "androidx.hilt:hilt-compiler:$hiltAndroidXVersion"
     androidXHiltNavigation = "androidx.hilt:hilt-navigation:$hiltAndroidXVersion"
     androidXHiltNavigationCompose = "androidx.hilt:hilt-navigation-compose:1.0.0-alpha01"

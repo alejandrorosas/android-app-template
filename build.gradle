@@ -1,5 +1,5 @@
 buildscript {
-    ext.kotlin_version = "1.4.31"
+    ext.kotlin_version = "1.4.32"
     ext.dagger_version = "2.35.1"
     ext.compose_version = "1.0.0-beta06"
 
@@ -9,7 +9,7 @@ buildscript {
     }
 
     dependencies {
-        classpath "com.android.tools.build:gradle:7.0.0-alpha14"
+        classpath "com.android.tools.build:gradle:7.0.0-alpha15"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath "com.google.dagger:hilt-android-gradle-plugin:$dagger_version"
     }

@@ -19,7 +19,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.hilt.navigation.compose.hiltNavGraphViewModel
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import dev.alejandrorosas.core.ui.AppTheme
 
@@ -29,7 +29,7 @@ fun FeatureTemplate(navController: NavController) {
 }
 
 @Composable
-fun Screen(featureTemplateViewModel: FeatureTemplateViewModel = hiltNavGraphViewModel(), onNavigateBack: () -> Unit) {
+fun Screen(featureTemplateViewModel: FeatureTemplateViewModel = hiltViewModel(), onNavigateBack: () -> Unit) {
     val counter: Int by featureTemplateViewModel.counter.observeAsState(0)
     AppTheme {
         Scaffold(

@@ -21,15 +21,6 @@ allprojects {
     repositories {
         google()
         mavenCentral()
-
-        maven {
-            url "https://kotlin.bintray.com/kotlinx"
-            content {
-                // TODO: Deprecate jcenter/bintray (https://github.com/Kotlin/kotlinx.collections.immutable/issues/96)
-                //       Transitive from androidx.compose.ui:ui:1.0.0-alpha11
-                includeModule("org.jetbrains.kotlinx", "kotlinx-collections-immutable-jvm")
-            }
-        }
     }
 
     tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).configureEach {

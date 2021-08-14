@@ -15,5 +15,8 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-gradle-
 
-      - name: Test
+      - name: Unit tests
         run: ./gradlew test
+
+      - name: UI tests
+        run: ./gradlew connectedCheck

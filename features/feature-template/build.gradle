@@ -23,4 +23,7 @@ dependencies {
     kapt rootProject.ext.androidXHiltCompiler
 
     testImplementation rootProject.ext.junit
+
+    androidTestImplementation rootProject.ext.composeUiTestJunit
+    androidTestImplementation rootProject.ext.composeUiTestManifest
 }

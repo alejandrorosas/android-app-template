@@ -40,7 +40,10 @@ fun Screen(featureTemplateViewModel: FeatureTemplateViewModel = hiltViewModel(),
                         Text(text = "Feature Template")
                     },
                     navigationIcon = {
-                        IconButton(onClick = onNavigateBack) {
+                        IconButton(
+                            onClick = onNavigateBack,
+                            modifier = Modifier.testTag("FeatureTemplateBack"),
+                        ) {
                             Icon(Icons.Filled.ArrowBack, contentDescription = null)
                         }
                     },

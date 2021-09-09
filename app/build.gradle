@@ -53,4 +53,5 @@ dependencies {
 
     androidTestImplementation rootProject.ext.androidTestJunit
     androidTestImplementation rootProject.ext.androidTestEspresso
+    androidTestImplementation rootProject.ext.composeUiTestJunit
 }

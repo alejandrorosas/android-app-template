@@ -1,6 +1,6 @@
 ext {
     kotlin = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
-    appcompat = "androidx.appcompat:appcompat:1.4.0-alpha03"
+    appcompat = "androidx.appcompat:appcompat:1.4.0-beta01"
     dagger = "com.google.dagger:dagger:$dagger_version"
     daggerCompiler = "com.google.dagger:dagger-compiler:$dagger_version"
     constraintLayout = "androidx.constraintlayout:constraintlayout:2.1.1"
@@ -25,8 +25,8 @@ ext {
     composeUiLivedata = "androidx.compose.runtime:runtime-livedata:$compose_version"
     composeUiTooling = "androidx.compose.ui:ui-tooling:$compose_version"
     composeMaterial = "androidx.compose.material:material:$compose_version"
-    composeNavigation = "androidx.navigation:navigation-compose:2.4.0-alpha09"
-    viewmodelCompose = "androidx.lifecycle:lifecycle-viewmodel-compose:2.4.0-beta01"
+    composeNavigation = "androidx.navigation:navigation-compose:2.4.0-alpha10"
+    viewmodelCompose = "androidx.lifecycle:lifecycle-viewmodel-compose:2.4.0-rc01"
 
     // Compose UI test
     composeUiTestJunit = "androidx.compose.ui:ui-test-junit4:$compose_version"

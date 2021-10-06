@@ -10,13 +10,13 @@ This is a template to use as a base for writing Android applications using the l
  - Easy to use multi module Navigation based on [Jetpack Navigation](https://developer.android.com/guide/navigation).
  - [Jetpack Compose](https://developer.android.com/jetpack/compose)
  - [Dagger Hilt](https://dagger.dev/hilt/)
+ - UI testing with Espresso
  - [Dependabot](https://dependabot.com/) to keep libraries always up to date
  - [Github Actions](https://github.com/features/actions)
 
 ## Future Work
 
  - Unit testing
- - UI testing with Espresso
 
 ## License
 

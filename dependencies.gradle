@@ -26,7 +26,7 @@ ext {
     composeUiTooling = "androidx.compose.ui:ui-tooling:$compose_version"
     composeMaterial = "androidx.compose.material:material:$compose_version"
     composeNavigation = "androidx.navigation:navigation-compose:2.4.0-alpha10"
-    viewmodelCompose = "androidx.lifecycle:lifecycle-viewmodel-compose:2.4.0-rc01"
+    viewmodelCompose = "androidx.lifecycle:lifecycle-viewmodel-compose:2.4.0"
 
     // Compose UI test
     composeUiTestJunit = "androidx.compose.ui:ui-test-junit4:$compose_version"

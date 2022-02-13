@@ -13,7 +13,7 @@ ext {
     hiltAndroidXVersion = "1.0.0"
     androidXHiltCompiler = "androidx.hilt:hilt-compiler:$hiltAndroidXVersion"
     androidXHiltNavigation = "androidx.hilt:hilt-navigation:$hiltAndroidXVersion"
-    androidXHiltNavigationCompose = "androidx.hilt:hilt-navigation-compose:1.0.0-beta01"
+    androidXHiltNavigationCompose = "androidx.hilt:hilt-navigation-compose:1.0.0"
 
     junit = "junit:junit:4.13.2"
 

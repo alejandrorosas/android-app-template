@@ -7,7 +7,7 @@ configurations {
 }
 
 dependencies {
-    ktlint("com.pinterest:ktlint:0.44.0") {
+    ktlint("com.pinterest:ktlint:0.45.2") {
         attributes {
             attribute(Bundling.BUNDLING_ATTRIBUTE, getObjects().named(Bundling, Bundling.EXTERNAL))
         }
@@ -16,14 +16,14 @@ dependencies {
 
 task ktlint(type: JavaExec, group: "verification") {
     description = "Check Kotlin code style."
-    main = "com.pinterest.ktlint.Main"
+    mainClass.set("com.pinterest.ktlint.Main")
     classpath = configurations.ktlint
     args "src/**/*.kt", "--reporter=plain"
 }
 
 task ktlintFormat(type: JavaExec, group: "formatting") {
     description = "Fix Kotlin code style deviations."
-    main = "com.pinterest.ktlint.Main"
+    mainClass.set("com.pinterest.ktlint.Main")
     classpath = configurations.ktlint
     args "-F", "src/**/*.kt"
 }

@@ -52,7 +52,7 @@ fun ScreenContent(onButtonClick: () -> Unit) {
             onClick = { onButtonClick() },
             modifier = Modifier
                 .align(Alignment.CenterVertically)
-                .fillMaxWidth()
+                .fillMaxWidth(),
         ) {
             Text("Navigate to Feature")
         }

@@ -68,7 +68,7 @@ fun ScreenContent(count: Int) {
     Row(
         modifier = Modifier
             .fillMaxHeight()
-            .fillMaxWidth()
+            .fillMaxWidth(),
     ) {
         Text(
             text = "FAB has been clicked $count times",

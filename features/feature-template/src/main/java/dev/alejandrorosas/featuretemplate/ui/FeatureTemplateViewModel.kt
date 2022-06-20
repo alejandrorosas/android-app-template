@@ -10,7 +10,7 @@ import javax.inject.Named
 
 @HiltViewModel
 class FeatureTemplateViewModel @Inject constructor(
-    @Named(INITIAL_COUNTER) val initialCounter: Int
+    @Named(INITIAL_COUNTER) val initialCounter: Int,
 ) : ViewModel() {
     private var _counter = MutableLiveData(initialCounter)
     val counter: LiveData<Int> = _counter

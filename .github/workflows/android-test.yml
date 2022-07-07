@@ -1,5 +1,11 @@
 name: Test
+
 on: push
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: macos-latest
@@ -16,7 +22,6 @@ jobs:
           path: |
             ~/.gradle/caches
             ~/.gradle/wrapper
-            ~/.gradle/configuration-cache
           key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
           restore-keys: |
             ${{ runner.os }}-gradle-

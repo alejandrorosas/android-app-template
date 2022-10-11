@@ -1,0 +1,10 @@
+apply plugin: 'kotlin'
+
+dependencies {
+    compileOnly rootProject.ext.lintApi
+    compileOnly rootProject.ext.lintChecks
+
+    testImplementation rootProject.ext.junit
+    testImplementation rootProject.ext.lint
+    testImplementation rootProject.ext.lintTests
+}

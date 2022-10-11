@@ -31,4 +31,11 @@ ext {
     // Compose UI test
     composeUiTestJunit = "androidx.compose.ui:ui-test-junit4:$compose_version"
     composeUiTestManifest = "androidx.compose.ui:ui-test-manifest:$compose_version"
+
+    // Lint
+    lint_version = "30.3.0"
+    lint = "com.android.tools.lint:lint:$lint_version"
+    lintApi = "com.android.tools.lint:lint-api:$lint_version"
+    lintChecks = "com.android.tools.lint:lint-checks:$lint_version"
+    lintTests = "com.android.tools.lint:lint-tests:$lint_version"
 }

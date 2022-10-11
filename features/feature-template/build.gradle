@@ -9,6 +9,7 @@ android {
 
 dependencies {
     implementation project(":core")
+    lintChecks project(":lint")
 
     implementation rootProject.ext.core
     implementation rootProject.ext.dagger

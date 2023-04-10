@@ -11,6 +11,7 @@ This is a template to use as a base for writing Android applications using the l
  - [Jetpack Compose](https://developer.android.com/jetpack/compose)
  - [Dagger Hilt](https://dagger.dev/hilt/)
  - UI testing with Espresso
+ - [Gradle version catalogs](https://docs.gradle.org/current/userguide/platforms.html)
  - [Dependabot](https://dependabot.com/) to keep libraries always up to date
  - [Github Actions](https://github.com/features/actions)
 

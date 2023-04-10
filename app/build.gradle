@@ -26,24 +26,24 @@ dependencies {
     implementation project(":features:home")
     implementation project(":features:feature-template")
 
-    implementation rootProject.ext.kotlin
-    implementation rootProject.ext.appcompat
-    implementation rootProject.ext.core
-    implementation rootProject.ext.dagger
-    implementation rootProject.ext.hilt
-    implementation rootProject.ext.androidXHiltNavigation
-    implementation rootProject.ext.androidXHiltNavigationCompose
+    implementation libs.kotlin
+    implementation libs.appcompat
+    implementation libs.androidx.core
+    implementation libs.dagger
+    implementation libs.hilt
+    implementation libs.androidx.hilt.navigation
+    implementation libs.androidx.hilt.navigation.compose
 
-    implementation rootProject.ext.composeUi
-    implementation rootProject.ext.composeNavigation
+    implementation libs.compose.ui
+    implementation libs.compose.navigation
 
-    kapt rootProject.ext.daggerCompiler
-    kapt rootProject.ext.hiltCompiler
-    kapt rootProject.ext.androidXHiltCompiler
+    kapt libs.dagger.compiler
+    kapt libs.hilt.compiler
+    kapt libs.androidx.hilt.compiler
 
-    testImplementation rootProject.ext.junit
+    testImplementation libs.junit
 
-    androidTestImplementation rootProject.ext.androidTestJunit
-    androidTestImplementation rootProject.ext.androidTestEspresso
-    androidTestImplementation rootProject.ext.composeUiTestJunit
+    androidTestImplementation libs.androidx.test.junit
+    androidTestImplementation libs.androidx.test.espresso
+    androidTestImplementation libs.compose.ui.test.junit
 }

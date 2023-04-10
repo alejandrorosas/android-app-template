@@ -1,17 +1,13 @@
 buildscript {
-    ext.kotlin_version = "1.8.10"
-    ext.dagger_version = "2.45"
-    ext.compose_version = "1.4.0"
-
     repositories {
         google()
         mavenCentral()
     }
 
     dependencies {
-        classpath "com.android.tools.build:gradle:7.4.2"
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-        classpath "com.google.dagger:hilt-android-gradle-plugin:$dagger_version"
+        classpath libs.android.gradle.plugin
+        classpath libs.kotlin.gradle.plugin
+        classpath libs.dagger.gradle.plugin
     }
 }
 
@@ -38,7 +34,7 @@ subprojects {
                 compileSdkVersion 33
 
                 defaultConfig {
-                    minSdkVersion 24
+                    minSdkVersion 26
                     targetSdkVersion 33
 
                     testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -54,7 +50,7 @@ subprojects {
                 }
 
                 composeOptions {
-                    kotlinCompilerExtensionVersion "1.4.2"
+                    kotlinCompilerExtensionVersion libs.versions.composeCompiler.get()
                 }
 
                 packagingOptions {
@@ -65,8 +61,6 @@ subprojects {
         }
     }
 }
-
-apply from: "dependencies.gradle"
 
 task clean(type: Delete) {
     delete rootProject.buildDir

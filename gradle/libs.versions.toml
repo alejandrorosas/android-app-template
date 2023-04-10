@@ -1,5 +1,5 @@
 [versions]
-kotlin = "1.8.10"
+kotlin = "1.8.20"
 dagger = "2.45"
 compose = "1.4.2"
 composeCompiler = "1.4.2"

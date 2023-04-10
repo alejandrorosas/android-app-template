@@ -10,25 +10,25 @@ android {
 dependencies {
     implementation project(":core")
 
-    implementation rootProject.ext.core
-    implementation rootProject.ext.dagger
-    implementation rootProject.ext.hilt
-    implementation rootProject.ext.androidXHiltNavigationCompose
+    implementation libs.androidx.core
+    implementation libs.dagger
+    implementation libs.hilt
+    implementation libs.androidx.hilt.navigation.compose
 
-    implementation rootProject.ext.composeUi
-    implementation rootProject.ext.composeUiLivedata
-    implementation rootProject.ext.composeUiTooling
-    implementation rootProject.ext.composeMaterial
-    implementation rootProject.ext.composeNavigation
-    implementation rootProject.ext.viewmodelCompose
+    implementation libs.compose.ui
+    implementation libs.compose.ui.livedata
+    implementation libs.compose.ui.tooling
+    implementation libs.compose.material
+    implementation libs.compose.navigation
+    implementation libs.lifecycle.viewmodel.compose
 
-    kapt rootProject.ext.daggerCompiler
-    kapt rootProject.ext.hiltCompiler
-    kapt rootProject.ext.androidXHiltCompiler
+    kapt libs.dagger.compiler
+    kapt libs.hilt.compiler
+    kapt libs.androidx.hilt.compiler
 
-    testImplementation rootProject.ext.junit
+    testImplementation libs.junit
 
-    androidTestImplementation rootProject.ext.androidTestJunit
-    androidTestImplementation rootProject.ext.composeUiTestJunit
-    androidTestImplementation rootProject.ext.composeUiTestManifest
+    androidTestImplementation libs.androidx.test.junit
+    androidTestImplementation libs.compose.ui.test.junit
+    androidTestImplementation libs.compose.ui.test.manifest
 }

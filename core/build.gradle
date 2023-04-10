@@ -8,17 +8,17 @@ android {
 }
 
 dependencies {
-    implementation rootProject.ext.core
-    implementation rootProject.ext.dagger
-    implementation rootProject.ext.hilt
+    implementation libs.androidx.core
+    implementation libs.dagger
+    implementation libs.hilt
 
-    implementation rootProject.ext.composeUi
-    implementation rootProject.ext.composeUiTooling
-    implementation rootProject.ext.composeMaterial
-    implementation rootProject.ext.composeNavigation
+    implementation libs.compose.ui
+    implementation libs.compose.ui.tooling
+    implementation libs.compose.material
+    implementation libs.compose.navigation
 
-    kapt rootProject.ext.daggerCompiler
-    kapt rootProject.ext.hiltCompiler
+    kapt libs.dagger.compiler
+    kapt libs.hilt.compiler
 
-    testImplementation rootProject.ext.junit
+    testImplementation libs.junit
 }

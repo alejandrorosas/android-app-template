@@ -16,7 +16,7 @@ kotlin = { module = "org.jetbrains.kotlin:kotlin-stdlib-jdk8", version.ref = "ko
 appcompat = { module = "androidx.appcompat:appcompat", version = "1.6.1" }
 dagger = { module = "com.google.dagger:dagger", version.ref = "dagger" }
 dagger-compiler = { module = "com.google.dagger:dagger-compiler", version.ref = "dagger" }
-androidx-core = { module = "androidx.core:core-ktx", version = "1.10.0" }
+androidx-core = { module = "androidx.core:core-ktx", version = "1.10.1" }
 
 # Hilt
 hilt = { module = "com.google.dagger:hilt-android", version.ref = "dagger" }

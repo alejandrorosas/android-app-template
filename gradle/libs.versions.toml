@@ -10,7 +10,7 @@ android-gradle-plugin = { module = "com.android.tools.build:gradle", version = "
 kotlin-gradle-plugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
 dagger-gradle-plugin = { module = "com.google.dagger:hilt-android-gradle-plugin", version.ref = "dagger" }
 
-ktlint = { module = "com.pinterest:ktlint", version = "0.49.1" }
+ktlint = { module = "com.pinterest:ktlint", version = "0.50.0" }
 
 kotlin = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlin" }
 appcompat = { module = "androidx.appcompat:appcompat", version = "1.6.1" }

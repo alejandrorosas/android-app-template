@@ -10,6 +10,7 @@ This is a template to use as a base for writing Android applications using the l
  - Easy to use multi module Navigation based on [Jetpack Navigation](https://developer.android.com/guide/navigation).
  - [Jetpack Compose](https://developer.android.com/jetpack/compose)
  - [Dagger Hilt](https://dagger.dev/hilt/)
+ - [Kotlin Symbol Processing (KSP)](https://kotlinlang.org/docs/ksp-overview.html)
  - UI testing with Espresso
  - [Gradle version catalogs](https://docs.gradle.org/current/userguide/platforms.html)
  - [Dependabot](https://dependabot.com/) to keep libraries always up to date

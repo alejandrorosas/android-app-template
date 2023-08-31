@@ -43,3 +43,6 @@ compose-compiler = { module = "androidx.compose.compiler:compiler", version.ref 
 # Compose UI test
 compose-ui-test-junit = { module = "androidx.compose.ui:ui-test-junit4", version.ref = "compose" }
 compose-ui-test-manifest = { module = "androidx.compose.ui:ui-test-manifest", version.ref = "compose" }
+
+[plugins]
+ksp = { id = "com.google.devtools.ksp", version = "1.9.10-1.0.13" }

@@ -15,11 +15,12 @@ import javax.inject.Named
 class FeatureTemplateModule {
     @Provides
     @IntoSet
-    fun provideFeatureTemplateNavigation() = Navigation { navController ->
-        composable("feature_template") {
-            FeatureTemplate(navController)
+    fun provideFeatureTemplateNavigation() =
+        Navigation { navController ->
+            composable("feature_template") {
+                FeatureTemplate(navController)
+            }
         }
-    }
 
     @Provides
     @Named(INITIAL_COUNTER)

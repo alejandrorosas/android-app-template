@@ -10,7 +10,8 @@ android-gradle-plugin = { module = "com.android.tools.build:gradle", version = "
 kotlin-gradle-plugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
 dagger-gradle-plugin = { module = "com.google.dagger:hilt-android-gradle-plugin", version.ref = "dagger" }
 
-ktlint = { module = "com.pinterest:ktlint", version = "0.50.0" }
+ktlint-cli = { module = "com.pinterest.ktlint:ktlint-cli", version = "1.0.0" }
+ktlint-compose = { module = "io.nlopez.compose.rules:ktlint", version = "0.2.2" }
 
 kotlin = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlin" }
 appcompat = { module = "androidx.appcompat:appcompat", version = "1.6.1" }
@@ -43,3 +44,6 @@ compose-compiler = { module = "androidx.compose.compiler:compiler", version.ref 
 # Compose UI test
 compose-ui-test-junit = { module = "androidx.compose.ui:ui-test-junit4", version.ref = "compose" }
 compose-ui-test-manifest = { module = "androidx.compose.ui:ui-test-manifest", version.ref = "compose" }
+
+[plugins]
+ksp = { id = "com.google.devtools.ksp", version = "1.9.10-1.0.13" }

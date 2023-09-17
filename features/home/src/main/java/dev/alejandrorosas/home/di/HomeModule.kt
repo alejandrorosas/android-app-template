@@ -20,9 +20,10 @@ class HomeModule {
 
     @Provides
     @IntoSet
-    fun provideHomeNavigation() = Navigation { navController ->
-        composable("home") {
-            Home(navController)
+    fun provideHomeNavigation() =
+        Navigation { navController ->
+            composable("home") {
+                Home(navController)
+            }
         }
-    }
 }

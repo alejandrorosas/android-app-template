@@ -11,6 +11,10 @@ buildscript {
     }
 }
 
+plugins {
+    alias libs.plugins.ksp apply false
+}
+
 allprojects {
     apply from: "$rootDir/ktlint.gradle"
 
@@ -19,9 +23,9 @@ allprojects {
         mavenCentral()
     }
 
-    tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).configureEach {
-        kotlinOptions {
-            jvmTarget = JavaVersion.VERSION_17
+    tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompilationTask.class).configureEach {
+        compilerOptions {
+            jvmTarget = org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17
             allWarningsAsErrors = true
         }
     }
@@ -58,8 +62,4 @@ subprojects {
             }
         }
     }
-}
-
-task clean(type: Delete) {
-    delete rootProject.buildDir
 }

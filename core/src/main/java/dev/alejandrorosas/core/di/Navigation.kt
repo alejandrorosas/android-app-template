@@ -4,7 +4,10 @@ import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 
 fun interface Navigation {
-    fun prepare(navGraphBuilder: NavGraphBuilder, navController: NavController) {
+    fun prepare(
+        navGraphBuilder: NavGraphBuilder,
+        navController: NavController,
+    ) {
         navGraphBuilder.compose(navController)
     }
 

@@ -10,7 +10,6 @@ import dev.alejandrorosas.core.di.Navigation
 @Module
 @InstallIn(SingletonComponent::class)
 class ApplicationModule {
-
     @Provides
     @ElementsIntoSet
     fun primeEmptyNavigationSet(): Set<Navigation> {

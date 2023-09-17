@@ -7,23 +7,27 @@ configurations {
 }
 
 dependencies {
-    ktlint(libs.ktlint) {
+    ktlint(libs.ktlint.cli) {
         attributes {
             attribute(Bundling.BUNDLING_ATTRIBUTE, getObjects().named(Bundling, Bundling.EXTERNAL))
         }
     }
+    ktlint libs.ktlint.compose
 }
 
-task ktlint(type: JavaExec, group: "verification") {
+tasks.register("ktlint", JavaExec) {
+    group = "verification"
     description = "Check Kotlin code style."
-    mainClass.set("com.pinterest.ktlint.Main")
     classpath = configurations.ktlint
-    args "src/**/*.kt"
+    mainClass = "com.pinterest.ktlint.Main"
+    args "src/**/*.kt", "**.kts", "!**/build/**"
 }
 
-task ktlintFormat(type: JavaExec, group: "formatting") {
+tasks.register("ktlintFormat", JavaExec) {
+    group = "formatting"
     description = "Fix Kotlin code style deviations."
-    mainClass.set("com.pinterest.ktlint.Main")
     classpath = configurations.ktlint
-    args "-F", "src/**/*.kt"
+    mainClass = "com.pinterest.ktlint.Main"
+    jvmArgs "--add-opens=java.base/java.lang=ALL-UNNAMED"
+    args "-F", "src/**/*.kt", "**.kts", "!**/build/**"
 }

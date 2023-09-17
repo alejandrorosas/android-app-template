@@ -3,6 +3,7 @@ package dev.alejandrorosas.featuretemplate.ui
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material.FloatingActionButton
 import androidx.compose.material.Icon
 import androidx.compose.material.IconButton
@@ -30,10 +31,15 @@ fun FeatureTemplate(navController: NavController) {
 }
 
 @Composable
-fun Screen(featureTemplateViewModel: FeatureTemplateViewModel = hiltViewModel(), onNavigateBack: () -> Unit) {
+fun Screen(
+    modifier: Modifier = Modifier,
+    featureTemplateViewModel: FeatureTemplateViewModel = hiltViewModel(),
+    onNavigateBack: () -> Unit,
+) {
     val counter: Int by featureTemplateViewModel.counter.observeAsState(0)
     AppTheme {
         Scaffold(
+            modifier = modifier,
             topBar = {
                 TopAppBar(
                     title = {
@@ -58,32 +64,37 @@ fun Screen(featureTemplateViewModel: FeatureTemplateViewModel = hiltViewModel(),
                 }
             },
         ) {
-            ScreenContent(counter)
+            ScreenContent(counter, Modifier.padding(it))
         }
     }
 }
 
 @Composable
-fun ScreenContent(count: Int) {
+fun ScreenContent(
+    count: Int,
+    modifier: Modifier = Modifier,
+) {
     Row(
-        modifier = Modifier
-            .fillMaxHeight()
-            .fillMaxWidth(),
+        modifier =
+            modifier
+                .fillMaxHeight()
+                .fillMaxWidth(),
     ) {
         Text(
             text = "FAB has been clicked $count times",
             textAlign = TextAlign.Center,
-            modifier = Modifier
-                .align(Alignment.CenterVertically)
-                .fillMaxWidth()
-                .testTag("FeatureTemplateText"),
+            modifier =
+                Modifier
+                    .align(Alignment.CenterVertically)
+                    .fillMaxWidth()
+                    .testTag("FeatureTemplateText"),
         )
     }
 }
 
 @Preview
 @Composable
-fun DefaultPreview() {
+private fun DefaultPreview() {
     val fakeViewModel = FeatureTemplateViewModel(1)
     Screen(fakeViewModel) { }
 }

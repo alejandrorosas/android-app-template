@@ -24,9 +24,13 @@ fun Home(navController: NavController) {
 }
 
 @Composable
-fun Screen(onButtonClick: () -> Unit) {
+fun Screen(
+    modifier: Modifier = Modifier,
+    onButtonClick: () -> Unit,
+) {
     AppTheme {
         Scaffold(
+            modifier = modifier,
             topBar = {
                 TopAppBar(
                     title = {
@@ -35,24 +39,29 @@ fun Screen(onButtonClick: () -> Unit) {
                 )
             },
         ) {
-            ScreenContent(onButtonClick = onButtonClick)
+            ScreenContent(Modifier.padding(it), onButtonClick = onButtonClick)
         }
     }
 }
 
 @Composable
-fun ScreenContent(onButtonClick: () -> Unit) {
+fun ScreenContent(
+    modifier: Modifier = Modifier,
+    onButtonClick: () -> Unit,
+) {
     Row(
-        modifier = Modifier
-            .fillMaxHeight()
-            .fillMaxWidth()
-            .padding(16.dp),
+        modifier =
+            modifier
+                .fillMaxHeight()
+                .fillMaxWidth()
+                .padding(16.dp),
     ) {
         Button(
             onClick = { onButtonClick() },
-            modifier = Modifier
-                .align(Alignment.CenterVertically)
-                .fillMaxWidth(),
+            modifier =
+                Modifier
+                    .align(Alignment.CenterVertically)
+                    .fillMaxWidth(),
         ) {
             Text("Navigate to Feature")
         }
@@ -61,6 +70,6 @@ fun ScreenContent(onButtonClick: () -> Unit) {
 
 @Preview
 @Composable
-fun DefaultPreview() {
+private fun DefaultPreview() {
     Screen {}
 }

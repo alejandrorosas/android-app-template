@@ -96,5 +96,5 @@ fun ScreenContent(
 @Composable
 private fun DefaultPreview() {
     val fakeViewModel = FeatureTemplateViewModel(1)
-    Screen(fakeViewModel) { }
+    Screen(featureTemplateViewModel = fakeViewModel) { }
 }

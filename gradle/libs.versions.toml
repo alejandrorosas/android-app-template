@@ -6,7 +6,7 @@ composeCompiler = "1.5.3"
 hiltAndroidX = "1.0.0"
 
 [libraries]
-android-gradle-plugin = { module = "com.android.tools.build:gradle", version = "8.1.1" }
+android-gradle-plugin = { module = "com.android.tools.build:gradle", version = "8.1.2" }
 kotlin-gradle-plugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
 dagger-gradle-plugin = { module = "com.google.dagger:hilt-android-gradle-plugin", version.ref = "dagger" }
 

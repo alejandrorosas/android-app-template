@@ -35,7 +35,7 @@ compose-ui = { module = "androidx.compose.ui:ui", version.ref = "compose" }
 compose-ui-livedata = { module = "androidx.compose.runtime:runtime-livedata", version.ref = "compose" }
 compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose" }
 compose-material = { module = "androidx.compose.material:material", version = "1.5.3" }
-compose-navigation = { module = "androidx.navigation:navigation-compose", version = "2.7.3" }
+compose-navigation = { module = "androidx.navigation:navigation-compose", version = "2.7.4" }
 lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version = "2.6.2" }
 
 # Compose Compiler (dummy library reference for dependabot updates)

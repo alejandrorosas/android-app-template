@@ -11,7 +11,7 @@ kotlin-gradle-plugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", v
 dagger-gradle-plugin = { module = "com.google.dagger:hilt-android-gradle-plugin", version.ref = "dagger" }
 
 ktlint-cli = { module = "com.pinterest.ktlint:ktlint-cli", version = "1.0.1" }
-ktlint-compose = { module = "io.nlopez.compose.rules:ktlint", version = "0.3.2" }
+ktlint-compose = { module = "io.nlopez.compose.rules:ktlint", version = "0.3.3" }
 
 kotlin = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlin" }
 appcompat = { module = "androidx.appcompat:appcompat", version = "1.6.1" }

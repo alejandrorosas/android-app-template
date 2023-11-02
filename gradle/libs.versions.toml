@@ -3,7 +3,7 @@ kotlin = "1.9.10"
 dagger = "2.48.1"
 compose = "1.5.4"
 composeCompiler = "1.5.3"
-hiltAndroidX = "1.0.0"
+hiltAndroidX = "1.1.0"
 
 [libraries]
 android-gradle-plugin = { module = "com.android.tools.build:gradle", version = "8.1.2" }

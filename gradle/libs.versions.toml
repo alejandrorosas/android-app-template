@@ -1,6 +1,6 @@
 [versions]
 kotlin = "1.9.20"
-dagger = "2.48.1"
+dagger = "2.49"
 compose = "1.5.4"
 composeCompiler = "1.5.5"
 hiltAndroidX = "1.1.0"

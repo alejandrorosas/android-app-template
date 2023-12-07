@@ -2,7 +2,7 @@
 kotlin = "1.9.20"
 dagger = "2.49"
 compose = "1.5.4"
-composeCompiler = "1.5.5"
+composeCompiler = "1.5.6"
 hiltAndroidX = "1.1.0"
 
 [libraries]

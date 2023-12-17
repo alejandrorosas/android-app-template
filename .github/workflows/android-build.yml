@@ -1,6 +1,6 @@
 name: Build
 
-on: push
+on: pull_request
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
@@ -44,7 +44,6 @@ jobs:
 
       - name: Find QR Code Build comment
         uses: peter-evans/find-comment@v2
-        if: github.event_name == 'pull_request'
         id: find-qr-comment
         with:
           issue-number: ${{ github.event.pull_request.number }}
@@ -53,7 +52,6 @@ jobs:
 
       - name: Create or update QR Code Build comment
         uses: peter-evans/create-or-update-comment@v3
-        if: github.event_name == 'pull_request'
         with:
           comment-id: ${{ steps.find-qr-comment.outputs.comment-id }}
           issue-number: ${{ github.event.pull_request.number }}

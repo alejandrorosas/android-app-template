@@ -1,0 +1,65 @@
+name: Build
+
+on: push
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          distribution: temurin
+          java-version: 17
+
+      - name: Setup Gradle
+        uses: gradle/gradle-build-action@v2
+
+      - name: Build
+        run: ./gradlew assembleDebug
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        id: app-debug-apk-upload-step
+        with:
+          name: app-debug-apk
+          path: app/build/outputs/apk/debug/app-debug.apk
+
+      - name: Find artifact url
+        uses: octokit/request-action@v2
+        id: artifact-request
+        with:
+          route: GET /repos/{owner}/{repo}/actions/artifacts/{artifact_id}
+          owner: alejandrorosas
+          repo: android-app-template
+          artifact_id: ${{ steps.app-debug-apk-upload-step.outputs.artifact-id }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Find QR Code Build comment
+        uses: peter-evans/find-comment@v2
+        if: github.event_name == 'pull_request'
+        id: find-qr-comment
+        with:
+          issue-number: ${{ github.event.pull_request.number }}
+          comment-author: 'github-actions[bot]'
+          body-includes: <!-- qr-code-comment-id -->
+
+      - name: Create or update QR Code Build comment
+        uses: peter-evans/create-or-update-comment@v3
+        if: github.event_name == 'pull_request'
+        with:
+          comment-id: ${{ steps.find-qr-comment.outputs.comment-id }}
+          issue-number: ${{ github.event.pull_request.number }}
+          edit-mode: replace
+          body: |
+            <!-- qr-code-comment-id -->
+            Pull request build: ${{ fromJson(steps.artifact-request.outputs.data).archive_download_url }}
+
+            ![QR Code](https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${{ fromJson(steps.artifact-request.outputs.data).archive_download_url }})

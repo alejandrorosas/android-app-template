@@ -58,6 +58,6 @@ jobs:
           edit-mode: replace
           body: |
             <!-- qr-code-comment-id -->
-            Pull request build: ${{ fromJson(steps.artifact-request.outputs.data).archive_download_url }}
+            Pull request build: ${{ fromJson(steps.artifact-request.outputs.data).url }}
 
-            ![QR Code](https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${{ fromJson(steps.artifact-request.outputs.data).archive_download_url }})
+            ![QR Code](https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=${{ fromJson(steps.artifact-request.outputs.data).url }})

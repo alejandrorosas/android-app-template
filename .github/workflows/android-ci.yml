@@ -41,6 +41,29 @@ jobs:
           path: app/build/outputs/apk/debug/app-debug.apk
           if-no-files-found: error
 
+      - name: Find QR Code Build comment
+        if: github.event_name == 'pull_request'
+        uses: peter-evans/find-comment@v2
+        id: find-qr-comment
+        with:
+          issue-number: ${{ github.event.pull_request.number }}
+          comment-author: 'github-actions[bot]'
+          body-includes: <!-- qr-code-comment-id -->
+
+      - name: Create or update QR Code Build comment
+        if: github.event_name == 'pull_request'
+        uses: peter-evans/create-or-update-comment@v3
+        with:
+          comment-id: ${{ steps.find-qr-comment.outputs.comment-id }}
+          issue-number: ${{ github.event.pull_request.number }}
+          edit-mode: replace
+          body: |
+            <!-- qr-code-comment-id -->
+            Pull request build:
+
+            ![QR Code](https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=${{ steps.app-debug-apk-upload-step.outputs.artifact-url }})
+
+
   lint:
     runs-on: ubuntu-latest
     steps:

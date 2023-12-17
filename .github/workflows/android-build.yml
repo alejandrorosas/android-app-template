@@ -32,7 +32,7 @@ jobs:
           path: app/build/outputs/apk/debug/app-debug.apk
 
       - name: Find artifact url
-        uses: octokit/request-action@v2
+        uses: octokit/request-action@v2.x
         id: artifact-request
         with:
           route: GET /repos/{owner}/{repo}/actions/artifacts/{artifact_id}

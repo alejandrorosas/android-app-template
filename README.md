@@ -1,6 +1,6 @@
 # Android App Template
 
-[![](https://github.com/alejandrorosas/android-app-template/workflows/Test/badge.svg)](https://github.com/alejandrorosas/android-app-template/actions) [![](https://github.com/alejandrorosas/android-app-template/workflows/Style/badge.svg)](https://github.com/alejandrorosas/android-app-template/actions)
+[![](https://github.com/alejandrorosas/android-app-template/actions/workflows/android-ci.yml/badge.svg)](https://github.com/alejandrorosas/android-app-template/actions/workflows/android-ci.yml)
 
 This is a template to use as a base for writing Android applications using the latest framework features.
 

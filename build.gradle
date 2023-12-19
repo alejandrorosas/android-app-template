@@ -1,65 +1,11 @@
-buildscript {
-    repositories {
-        google()
-        mavenCentral()
-    }
-
-    dependencies {
-        classpath libs.android.gradle.plugin
-        classpath libs.kotlin.gradle.plugin
-        classpath libs.dagger.gradle.plugin
-    }
-}
-
 plugins {
     alias libs.plugins.ksp apply false
-}
-
-allprojects {
-    apply from: "$rootDir/ktlint.gradle"
-
-    repositories {
-        google()
-        mavenCentral()
-    }
-
-    tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompilationTask.class).configureEach {
-        compilerOptions {
-            jvmTarget = org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17
-            allWarningsAsErrors = true
-        }
-    }
+    alias libs.plugins.android.application apply false
+    alias libs.plugins.android.library apply false
+    alias libs.plugins.kotlin.gradle apply false
+    alias libs.plugins.dagger.hilt apply false
 }
 
 subprojects {
-    afterEvaluate { project ->
-        if (project.hasProperty("android")) {
-            android {
-                compileSdkVersion 34
-
-                defaultConfig {
-                    minSdkVersion 26
-                    targetSdkVersion 33
-                }
-
-                compileOptions {
-                    sourceCompatibility JavaVersion.VERSION_17
-                    targetCompatibility JavaVersion.VERSION_17
-                }
-
-                buildFeatures {
-                    compose true
-                }
-
-                composeOptions {
-                    kotlinCompilerExtensionVersion libs.versions.composeCompiler.get()
-                }
-
-                packagingOptions {
-                    exclude "META-INF/AL2.0"
-                    exclude "META-INF/LGPL2.1"
-                }
-            }
-        }
-    }
+    apply from: "$rootDir/ktlint.gradle"
 }

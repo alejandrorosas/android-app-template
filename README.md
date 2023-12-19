@@ -13,6 +13,7 @@ This is a template to use as a base for writing Android applications using the l
  - [Kotlin Symbol Processing (KSP)](https://kotlinlang.org/docs/ksp-overview.html)
  - UI testing with Espresso
  - [Gradle version catalogs](https://docs.gradle.org/current/userguide/platforms.html)
+ - [Gradle convention plugins](https://docs.gradle.org/current/samples/sample_convention_plugins.html)
  - [Dependabot](https://dependabot.com/) to keep libraries always up to date
  - [Github Actions](https://github.com/features/actions)
 

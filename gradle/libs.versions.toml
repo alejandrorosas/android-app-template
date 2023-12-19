@@ -6,10 +6,6 @@ composeCompiler = "1.5.7"
 hiltAndroidX = "1.1.0"
 
 [libraries]
-android-gradle-plugin = { module = "com.android.tools.build:gradle", version = "8.2.0" }
-kotlin-gradle-plugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
-dagger-gradle-plugin = { module = "com.google.dagger:hilt-android-gradle-plugin", version.ref = "dagger" }
-
 ktlint-cli = { module = "com.pinterest.ktlint:ktlint-cli", version = "1.1.0" }
 ktlint-compose = { module = "io.nlopez.compose.rules:ktlint", version = "0.3.8" }
 
@@ -47,3 +43,7 @@ compose-ui-test-manifest = { module = "androidx.compose.ui:ui-test-manifest", ve
 
 [plugins]
 ksp = { id = "com.google.devtools.ksp", version = "1.9.21-1.0.16" }
+android-application = { id = "com.android.application", version = "8.2.0" }
+android-library = { id = "com.android.library", version = "8.2.0" }
+kotlin-gradle = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+dagger-hilt = { id = "com.google.dagger.hilt.android", version.ref = "dagger" }

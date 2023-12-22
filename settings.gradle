@@ -1,4 +1,13 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+
 rootProject.name = 'App Template'
+includeBuild 'build-conventions'
 include ':app'
 include ':core'
 include ':features:feature-template'

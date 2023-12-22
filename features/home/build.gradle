@@ -1,7 +1,6 @@
-apply plugin: 'com.android.library'
-apply plugin: 'kotlin-android'
-apply plugin: 'com.google.devtools.ksp'
-apply plugin: 'dagger.hilt.android.plugin'
+plugins {
+    id 'android-composable-conventions'
+}
 
 android {
     namespace 'dev.alejandrorosas.home'
@@ -9,20 +8,4 @@ android {
 
 dependencies {
     implementation project(":core")
-
-    implementation libs.androidx.core
-    implementation libs.dagger
-    implementation libs.hilt
-
-    implementation libs.compose.ui
-    implementation libs.compose.ui.livedata
-    implementation libs.compose.ui.tooling
-    implementation libs.compose.material
-    implementation libs.compose.navigation
-
-    ksp libs.dagger.compiler
-    ksp libs.hilt.compiler
-    ksp libs.androidx.hilt.compiler
-
-    testImplementation libs.junit
 }

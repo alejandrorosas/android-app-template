@@ -1,38 +1,11 @@
-apply plugin: 'com.android.library'
-apply plugin: 'kotlin-android'
-apply plugin: 'com.google.devtools.ksp'
-apply plugin: 'dagger.hilt.android.plugin'
+plugins {
+    id 'android-composable-conventions'
+}
 
 android {
     namespace 'dev.alejandrorosas.featuretemplate'
-
-    defaultConfig {
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-    }
 }
 
 dependencies {
     implementation project(":core")
-
-    implementation libs.androidx.core
-    implementation libs.dagger
-    implementation libs.hilt
-    implementation libs.androidx.hilt.navigation.compose
-
-    implementation libs.compose.ui
-    implementation libs.compose.ui.livedata
-    implementation libs.compose.ui.tooling
-    implementation libs.compose.material
-    implementation libs.compose.navigation
-    implementation libs.lifecycle.viewmodel.compose
-
-    ksp libs.dagger.compiler
-    ksp libs.hilt.compiler
-    ksp libs.androidx.hilt.compiler
-
-    testImplementation libs.junit
-
-    androidTestImplementation libs.androidx.test.junit
-    androidTestImplementation libs.compose.ui.test.junit
-    androidTestImplementation libs.compose.ui.test.manifest
 }

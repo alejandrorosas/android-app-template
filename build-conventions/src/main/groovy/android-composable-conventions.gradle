@@ -1,0 +1,27 @@
+plugins {
+    id "android-conventions"
+}
+
+android {
+    buildFeatures {
+        compose true
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion libs.versions.composeCompiler.get()
+    }
+}
+
+dependencies {
+    implementation libs.androidx.hilt.navigation.compose
+
+    implementation libs.compose.ui
+    implementation libs.compose.ui.livedata
+    implementation libs.compose.ui.tooling
+    implementation libs.compose.material
+    implementation libs.compose.navigation
+    implementation libs.lifecycle.viewmodel.compose
+
+    androidTestImplementation libs.compose.ui.test.junit
+    androidTestImplementation libs.compose.ui.test.manifest
+}

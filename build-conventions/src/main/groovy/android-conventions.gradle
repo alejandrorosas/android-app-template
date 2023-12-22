@@ -38,4 +38,8 @@ dependencies {
     ksp libs.dagger.compiler
     ksp libs.hilt.compiler
     ksp libs.androidx.hilt.compiler
+
+    testImplementation libs.junit
+
+    androidTestImplementation libs.androidx.test.junit
 }

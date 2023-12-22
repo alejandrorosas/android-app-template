@@ -5,7 +5,3 @@ plugins {
 android {
     namespace 'dev.alejandrorosas.core'
 }
-
-dependencies {
-    testImplementation libs.junit
-}

@@ -21,4 +21,7 @@ dependencies {
     implementation libs.compose.material
     implementation libs.compose.navigation
     implementation libs.lifecycle.viewmodel.compose
+
+    androidTestImplementation libs.compose.ui.test.junit
+    androidTestImplementation libs.compose.ui.test.manifest
 }

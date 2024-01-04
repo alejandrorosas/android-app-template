@@ -1,4 +1,5 @@
 [versions]
+androidGradlePlugin = "8.2.0"
 kotlin = "1.9.21"
 dagger = "2.50"
 compose = "1.5.4"
@@ -43,7 +44,7 @@ compose-ui-test-manifest = { module = "androidx.compose.ui:ui-test-manifest", ve
 
 [plugins]
 ksp = { id = "com.google.devtools.ksp", version = "1.9.21-1.0.16" }
-android-application = { id = "com.android.application", version = "8.2.0" }
-android-library = { id = "com.android.library", version = "8.2.0" }
+android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
+android-library = { id = "com.android.library", version.ref = "androidGradlePlugin" }
 kotlin-gradle = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 dagger-hilt = { id = "com.google.dagger.hilt.android", version.ref = "dagger" }

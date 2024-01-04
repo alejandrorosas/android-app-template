@@ -1,8 +1,25 @@
 version: 2
 updates:
-- package-ecosystem: gradle
-  directory: "/"
-  schedule:
-    interval: daily
-    time: "04:00"
-  open-pull-requests-limit: 10
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: gradle
+    directory: "/"
+    schedule:
+      interval: "daily"
+      time: "06:00"
+    registries: "*"
+    open-pull-requests-limit: 10
+    groups:
+      kotlin-ksp-compose:
+        patterns:
+          - "org.jetbrains.kotlin:*"
+          - "org.jetbrains.kotlin.*"
+          - "com.google.devtools.ksp"
+          - "androidx.compose.compiler:compiler"
+registries:
+  maven-google:
+    type: "maven-repository"
+    url: "https://maven.google.com"
+    replaces-base: true

@@ -1,6 +1,6 @@
 [versions]
 androidGradlePlugin = "8.2.1"
-kotlin = "1.9.21"
+kotlin = "1.9.22"
 dagger = "2.50"
 compose = "1.5.4"
 composeCompiler = "1.5.7"
@@ -43,7 +43,7 @@ compose-ui-test-junit = { module = "androidx.compose.ui:ui-test-junit4", version
 compose-ui-test-manifest = { module = "androidx.compose.ui:ui-test-manifest", version.ref = "compose" }
 
 [plugins]
-ksp = { id = "com.google.devtools.ksp", version = "1.9.21-1.0.16" }
+ksp = { id = "com.google.devtools.ksp", version = "1.9.22-1.0.16" }
 android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
 android-library = { id = "com.android.library", version.ref = "androidGradlePlugin" }
 kotlin-gradle = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }

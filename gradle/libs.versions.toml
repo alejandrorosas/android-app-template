@@ -31,7 +31,7 @@ androidx-test-espresso = { module = "androidx.test.espresso:espresso-core", vers
 compose-ui = { module = "androidx.compose.ui:ui", version.ref = "compose" }
 compose-ui-livedata = { module = "androidx.compose.runtime:runtime-livedata", version.ref = "compose" }
 compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose" }
-compose-material = { module = "androidx.compose.material:material", version = "1.6.3" }
+compose-material = { module = "androidx.compose.material:material", version = "1.6.4" }
 compose-navigation = { module = "androidx.navigation:navigation-compose", version = "2.7.7" }
 lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version = "2.7.0" }
 

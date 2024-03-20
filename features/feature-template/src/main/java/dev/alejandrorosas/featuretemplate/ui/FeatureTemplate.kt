@@ -4,15 +4,16 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material.FloatingActionButton
-import androidx.compose.material.Icon
-import androidx.compose.material.IconButton
-import androidx.compose.material.Scaffold
-import androidx.compose.material.Text
-import androidx.compose.material.TopAppBar
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Add
-import androidx.compose.material.icons.filled.ArrowBack
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.FloatingActionButton
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
+import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Text
+import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.livedata.observeAsState
@@ -41,6 +42,7 @@ fun Screen(
         Scaffold(
             modifier = modifier,
             topBar = {
+                @OptIn(ExperimentalMaterial3Api::class)
                 TopAppBar(
                     title = {
                         Text(text = "Feature Template")
@@ -50,7 +52,7 @@ fun Screen(
                             onClick = onNavigateBack,
                             modifier = Modifier.testTag("FeatureTemplateBack"),
                         ) {
-                            Icon(Icons.Filled.ArrowBack, contentDescription = null)
+                            Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = null)
                         }
                     },
                 )

@@ -1,23 +1,23 @@
 package dev.alejandrorosas.core.ui
 
 import androidx.compose.foundation.isSystemInDarkTheme
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.darkColors
-import androidx.compose.material.lightColors
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.darkColorScheme
+import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 
 private val DarkColorPalette =
-    darkColors(
+    darkColorScheme(
         primary = purple200,
-        primaryVariant = purple700,
-        secondary = teal200,
+        secondary = purple700,
+        tertiary = teal200,
     )
 
 private val LightColorPalette =
-    lightColors(
+    lightColorScheme(
         primary = purple500,
-        primaryVariant = purple700,
-        secondary = teal200,
+        secondary = purple700,
+        tertiary = teal200,
     )
 
 @Composable
@@ -33,9 +33,7 @@ fun AppTheme(
         }
 
     MaterialTheme(
-        colors = colors,
-        typography = typography,
-        shapes = shapes,
+        colorScheme = colors,
         content = content,
     )
 }

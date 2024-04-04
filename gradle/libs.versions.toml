@@ -2,7 +2,7 @@
 androidGradlePlugin = "8.3.1"
 kotlin = "1.9.23"
 dagger = "2.51.1"
-compose = "1.6.4"
+compose = "1.6.5"
 composeCompiler = "1.5.11"
 hiltAndroidX = "1.2.0"
 

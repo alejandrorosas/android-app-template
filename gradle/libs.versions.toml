@@ -3,7 +3,6 @@ androidGradlePlugin = "8.4.1"
 kotlin = "2.0.0"
 dagger = "2.51.1"
 compose = "1.6.7"
-composeCompiler = "1.5.14"
 hiltAndroidX = "1.2.0"
 
 [libraries]
@@ -35,9 +34,6 @@ compose-material = { module = "androidx.compose.material3:material3", version = 
 compose-navigation = { module = "androidx.navigation:navigation-compose", version = "2.7.7" }
 lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version = "2.8.0" }
 
-# Compose Compiler (dummy library reference for dependabot updates)
-compose-compiler = { module = "androidx.compose.compiler:compiler", version.ref = "composeCompiler" }
-
 # Compose UI test
 compose-ui-test-junit = { module = "androidx.compose.ui:ui-test-junit4", version.ref = "compose" }
 compose-ui-test-manifest = { module = "androidx.compose.ui:ui-test-manifest", version.ref = "compose" }
@@ -47,4 +43,5 @@ ksp = { id = "com.google.devtools.ksp", version = "1.9.24-1.0.20" }
 android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
 android-library = { id = "com.android.library", version.ref = "androidGradlePlugin" }
 kotlin-gradle = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 dagger-hilt = { id = "com.google.dagger.hilt.android", version.ref = "dagger" }

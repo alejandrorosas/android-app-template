@@ -1,6 +1,6 @@
 [versions]
 androidGradlePlugin = "8.4.1"
-kotlin = "1.9.24"
+kotlin = "2.0.0"
 dagger = "2.51.1"
 compose = "1.6.7"
 composeCompiler = "1.5.14"

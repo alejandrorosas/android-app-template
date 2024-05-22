@@ -1,7 +1,10 @@
-apply plugin: 'com.android.application'
-apply plugin: 'kotlin-android'
-apply plugin: 'com.google.devtools.ksp'
-apply plugin: 'dagger.hilt.android.plugin'
+plugins {
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.kotlin.gradle)
+    alias(libs.plugins.compose.compiler)
+    alias(libs.plugins.ksp)
+    alias(libs.plugins.dagger.hilt)
+}
 
 repositories {
     google()
@@ -16,7 +19,7 @@ android {
         applicationId "dev.alejandrorosas.apptemplate"
 
         minSdk 26
-        targetSdk 33
+        targetSdk 34
 
         versionCode 1
         versionName "1.0"
@@ -26,10 +29,6 @@ android {
 
     buildFeatures {
         compose true
-    }
-
-    composeOptions {
-        kotlinCompilerExtensionVersion libs.versions.composeCompiler.get()
     }
 
     compileOptions {

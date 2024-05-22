@@ -5,8 +5,10 @@
 build/
 captures/
 
-.gradle
+.gradle/
 local.properties
+
+.kotlin/
 
 .DS_Store
 .cxx

@@ -24,9 +24,7 @@ class FeatureTemplateModule {
 
     @Provides
     @Named(INITIAL_COUNTER)
-    fun provideInitialCounter(): Int {
-        return 5
-    }
+    fun provideInitialCounter(): Int = 5
 
     companion object Constants {
         const val INITIAL_COUNTER = "INITIAL_COUNTER"

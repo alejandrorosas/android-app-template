@@ -12,7 +12,5 @@ import dev.alejandrorosas.core.di.Navigation
 class ApplicationModule {
     @Provides
     @ElementsIntoSet
-    fun primeEmptyNavigationSet(): Set<Navigation> {
-        return emptySet()
-    }
+    fun primeEmptyNavigationSet(): Set<Navigation> = emptySet()
 }

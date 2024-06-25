@@ -72,6 +72,7 @@ dependencies {
 
     implementation libs.kotlin
     implementation libs.appcompat
+    implementation libs.androidx.tracing // Required for UI tests issue (No static method forceEnableAppTracing)
     implementation libs.androidx.core
     implementation libs.dagger
     implementation libs.hilt

@@ -1,14 +1,22 @@
 root = true
 
 [*]
+charset = utf-8
+end_of_line = lf
+indent_size = 4
+indent_style = space
 insert_final_newline = true
 
 [*.{kt,kts}]
-indent_style = space
-indent_size = 4
 max_line_length = 140
+
 ij_kotlin_allow_trailing_comma = true
 ij_kotlin_allow_trailing_comma_on_call_site = true
-ktlint_standard_function-naming = disabled
-ktlint_standard_annotation = disabled # https://github.com/pinterest/ktlint/issues/2138
+ij_kotlin_line_break_after_multiline_when_entry = false
+
+ktlint_function_naming_ignore_when_annotated_with = Composable
 ktlint_ignore_back_ticked_identifier = true
+ktlint_standard_annotation = disabled # https://github.com/pinterest/ktlint/issues/2138
+
+[**/build/generated/**]
+ktlint = disabled

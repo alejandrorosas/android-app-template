@@ -12,7 +12,7 @@ updates:
     registries: "*"
     open-pull-requests-limit: 10
     groups:
-      kotlin-ksp-compose:
+      kotlin-ksp:
         patterns:
           - "org.jetbrains.kotlin:*"
           - "org.jetbrains.kotlin.*"

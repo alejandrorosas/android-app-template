@@ -39,7 +39,7 @@ compose-ui-test-junit = { module = "androidx.compose.ui:ui-test-junit4", version
 compose-ui-test-manifest = { module = "androidx.compose.ui:ui-test-manifest", version.ref = "compose" }
 
 [plugins]
-ksp = { id = "com.google.devtools.ksp", version = "2.0.20-1.0.24" }
+ksp = { id = "com.google.devtools.ksp", version = "2.0.20-1.0.25" }
 android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
 android-library = { id = "com.android.library", version.ref = "androidGradlePlugin" }
 kotlin-gradle = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }

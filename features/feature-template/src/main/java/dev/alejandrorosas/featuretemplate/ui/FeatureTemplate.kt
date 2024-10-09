@@ -28,14 +28,14 @@ import dev.alejandrorosas.core.ui.AppTheme
 
 @Composable
 fun FeatureTemplate(navController: NavController) {
-    Screen { navController.popBackStack() }
+    Screen(onNavigateBack = { navController.popBackStack() })
 }
 
 @Composable
 fun Screen(
+    onNavigateBack: () -> Unit,
     modifier: Modifier = Modifier,
     featureTemplateViewModel: FeatureTemplateViewModel = hiltViewModel(),
-    onNavigateBack: () -> Unit,
 ) {
     val counter: Int by featureTemplateViewModel.counter.observeAsState(0)
     AppTheme {
@@ -98,5 +98,5 @@ fun ScreenContent(
 @Composable
 private fun DefaultPreview() {
     val fakeViewModel = FeatureTemplateViewModel(1)
-    Screen(featureTemplateViewModel = fakeViewModel) { }
+    Screen(onNavigateBack = {}, featureTemplateViewModel = fakeViewModel)
 }

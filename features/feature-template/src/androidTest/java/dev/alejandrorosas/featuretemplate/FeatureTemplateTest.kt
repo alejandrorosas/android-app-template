@@ -20,7 +20,7 @@ class FeatureTemplateTest {
     @Before
     fun setup() {
         composeTestRule.setContent {
-            Screen(featureTemplateViewModel = FeatureTemplateViewModel(5)) {}
+            Screen(onNavigateBack = {}, featureTemplateViewModel = FeatureTemplateViewModel(5))
         }
     }
 

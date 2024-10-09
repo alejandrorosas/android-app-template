@@ -21,13 +21,13 @@ import dev.alejandrorosas.core.ui.AppTheme
 
 @Composable
 fun Home(navController: NavController) {
-    Screen { navController.navigate("feature_template") }
+    Screen(onButtonClick = { navController.navigate("feature_template") })
 }
 
 @Composable
 fun Screen(
-    modifier: Modifier = Modifier,
     onButtonClick: () -> Unit,
+    modifier: Modifier = Modifier,
 ) {
     AppTheme {
         Scaffold(
@@ -41,15 +41,15 @@ fun Screen(
                 )
             },
         ) {
-            ScreenContent(Modifier.padding(it), onButtonClick = onButtonClick)
+            ScreenContent(onButtonClick = onButtonClick, Modifier.padding(it))
         }
     }
 }
 
 @Composable
 fun ScreenContent(
-    modifier: Modifier = Modifier,
     onButtonClick: () -> Unit,
+    modifier: Modifier = Modifier,
 ) {
     Row(
         modifier =
@@ -73,5 +73,5 @@ fun ScreenContent(
 @Preview
 @Composable
 private fun DefaultPreview() {
-    Screen {}
+    Screen(onButtonClick = {})
 }

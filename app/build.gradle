@@ -1,43 +1,16 @@
 plugins {
     alias(libs.plugins.android.application)
-    alias(libs.plugins.kotlin.gradle)
-    alias(libs.plugins.compose.compiler)
-    alias(libs.plugins.ksp)
-    alias(libs.plugins.dagger.hilt)
-}
-
-repositories {
-    google()
-    mavenCentral()
+    id 'android-composable-conventions'
 }
 
 android {
     namespace 'dev.alejandrorosas.apptemplate'
-    compileSdk 34
 
     defaultConfig {
         applicationId "dev.alejandrorosas.apptemplate"
 
-        minSdk 26
-        targetSdk 34
-
         versionCode 1
         versionName "1.0"
-
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-    }
-
-    buildFeatures {
-        compose true
-    }
-
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_17
-        targetCompatibility JavaVersion.VERSION_17
-    }
-
-    kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_17.toString()
     }
 
     packagingOptions {
@@ -72,22 +45,7 @@ dependencies {
 
     implementation libs.kotlin
     implementation libs.appcompat
-    implementation libs.androidx.core
-    implementation libs.dagger
-    implementation libs.hilt
     implementation libs.androidx.hilt.navigation
-    implementation libs.androidx.hilt.navigation.compose
 
-    implementation libs.compose.ui
-    implementation libs.compose.navigation
-
-    ksp libs.dagger.compiler
-    ksp libs.hilt.compiler
-    ksp libs.androidx.hilt.compiler
-
-    testImplementation libs.junit
-
-    androidTestImplementation libs.androidx.test.junit
     androidTestImplementation libs.androidx.test.espresso
-    androidTestImplementation libs.compose.ui.test.junit
 }

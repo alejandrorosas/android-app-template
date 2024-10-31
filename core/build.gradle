@@ -1,5 +1,5 @@
 plugins {
-    id 'android-composable-conventions'
+    id 'android-lib-composable-conventions'
 }
 
 android {

@@ -1,6 +1,6 @@
 plugins {
-    id "android-conventions"
-    id "org.jetbrains.kotlin.plugin.compose"
+    id 'android-conventions'
+    id 'org.jetbrains.kotlin.plugin.compose'
 }
 
 android {

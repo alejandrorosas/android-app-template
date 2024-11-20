@@ -7,7 +7,7 @@ hiltAndroidX = "1.2.0"
 
 [libraries]
 ktlint-cli = { module = "com.pinterest.ktlint:ktlint-cli", version = "1.4.1" }
-ktlint-compose = { module = "io.nlopez.compose.rules:ktlint", version = "0.4.18" }
+ktlint-compose = { module = "io.nlopez.compose.rules:ktlint", version = "0.4.19" }
 
 kotlin = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlin" }
 appcompat = { module = "androidx.appcompat:appcompat", version = "1.7.0" }

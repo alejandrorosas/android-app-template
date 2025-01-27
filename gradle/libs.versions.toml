@@ -1,6 +1,6 @@
 [versions]
 androidGradlePlugin = "8.8.0"
-kotlin = "2.1.0"
+kotlin = "2.1.10"
 dagger = "2.55"
 compose = "1.7.6"
 hiltAndroidX = "1.2.0"

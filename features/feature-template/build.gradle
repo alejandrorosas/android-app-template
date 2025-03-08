@@ -3,7 +3,7 @@ plugins {
 }
 
 android {
-    namespace 'dev.alejandrorosas.featuretemplate'
+    namespace = 'dev.alejandrorosas.featuretemplate'
 }
 
 dependencies {

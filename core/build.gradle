@@ -3,5 +3,5 @@ plugins {
 }
 
 android {
-    namespace 'dev.alejandrorosas.core'
+    namespace = 'dev.alejandrorosas.core'
 }

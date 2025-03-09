@@ -9,6 +9,7 @@ This is a template to use as a base for writing Android applications using the l
  - Multi module project setup
  - Easy to use multi module Navigation based on [Jetpack Navigation](https://developer.android.com/guide/navigation).
  - [Jetpack Compose](https://developer.android.com/jetpack/compose)
+ - [Compose Screenshot Testing](https://developer.android.com/studio/preview/compose-screenshot-testing)
  - [Dagger Hilt](https://dagger.dev/hilt/)
  - [Kotlin Symbol Processing (KSP)](https://kotlinlang.org/docs/ksp-overview.html)
  - UI testing with Espresso

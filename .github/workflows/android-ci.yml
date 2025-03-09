@@ -94,7 +94,7 @@ jobs:
           - name: Update screenshots
             if: ${{ failure() && steps.screenshot-tests.outcome == 'failure' && github.event_name == 'pull_request' }}
             run: |
-              git config --local user.email "${{ vars.GH_APP_ID }}+android-app-template-bot[bot]@users.noreply.github.com"
+              git config --local user.email "202522564+android-app-template-bot[bot]@users.noreply.github.com"
               git config --local user.name "android-app-template-bot[bot]"
               git fetch origin $GITHUB_HEAD_REF
               git checkout $GITHUB_HEAD_REF

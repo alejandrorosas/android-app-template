@@ -1,12 +1,15 @@
 plugins {
     id 'android-conventions'
     id 'org.jetbrains.kotlin.plugin.compose'
+    id 'com.android.compose.screenshot'
 }
 
 android {
     buildFeatures {
         compose = true
     }
+
+    experimentalProperties["android.experimental.enableScreenshotTest"] = true
 }
 
 dependencies {
@@ -21,4 +24,6 @@ dependencies {
 
     androidTestImplementation libs.compose.ui.test.junit
     androidTestImplementation libs.compose.ui.test.manifest
+
+    screenshotTestImplementation libs.compose.ui.tooling
 }

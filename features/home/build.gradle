@@ -3,7 +3,7 @@ plugins {
 }
 
 android {
-    namespace 'dev.alejandrorosas.home'
+    namespace = 'dev.alejandrorosas.home'
 }
 
 dependencies {

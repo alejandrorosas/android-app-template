@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace 'dev.alejandrorosas.apptemplate'
+    namespace = 'dev.alejandrorosas.apptemplate'
 
     defaultConfig {
         applicationId "dev.alejandrorosas.apptemplate"
@@ -29,7 +29,7 @@ android {
 
     buildTypes {
         debug {
-            signingConfig signingConfigs.debug
+            signingConfig = signingConfigs.debug
         }
         release {
             minifyEnabled false

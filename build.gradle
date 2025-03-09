@@ -5,6 +5,7 @@ plugins {
     alias libs.plugins.kotlin.gradle apply false
     alias libs.plugins.dagger.hilt apply false
     alias(libs.plugins.compose.compiler) apply false
+    alias libs.plugins.compose.screenshot apply false
 }
 
 subprojects {

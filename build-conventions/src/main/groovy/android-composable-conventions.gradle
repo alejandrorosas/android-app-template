@@ -25,5 +25,6 @@ dependencies {
     androidTestImplementation libs.compose.ui.test.junit
     androidTestImplementation libs.compose.ui.test.manifest
 
+    screenshotTestImplementation libs.screenshot.validation.api
     screenshotTestImplementation libs.compose.ui.tooling
 }

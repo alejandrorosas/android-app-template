@@ -19,4 +19,3 @@ private fun HomePreview() {
 private fun HomePreviewDarkMode() {
     Screen(onButtonClick = {})
 }
-

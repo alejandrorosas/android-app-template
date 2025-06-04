@@ -4,6 +4,7 @@ kotlin = "2.1.21"
 dagger = "2.56.2"
 compose = "1.8.2"
 hiltAndroidX = "1.2.0"
+screenshot = "0.0.1-alpha10"
 
 [libraries]
 ktlint-cli = { module = "com.pinterest.ktlint:ktlint-cli", version = "1.6.0" }
@@ -37,6 +38,7 @@ lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel
 # Compose UI test
 compose-ui-test-junit = { module = "androidx.compose.ui:ui-test-junit4", version.ref = "compose" }
 compose-ui-test-manifest = { module = "androidx.compose.ui:ui-test-manifest", version.ref = "compose" }
+screenshot-validation-api = { group = "com.android.tools.screenshot", name = "screenshot-validation-api", version.ref = "screenshot"}
 
 [plugins]
 ksp = { id = "com.google.devtools.ksp", version = "2.1.21-2.0.1" }
@@ -44,5 +46,5 @@ android-application = { id = "com.android.application", version.ref = "androidGr
 android-library = { id = "com.android.library", version.ref = "androidGradlePlugin" }
 kotlin-gradle = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
-compose-screenshot = { id = "com.android.compose.screenshot", version = "0.0.1-alpha09"}
+compose-screenshot = { id = "com.android.compose.screenshot", version.ref = "screenshot"}
 dagger-hilt = { id = "com.google.dagger.hilt.android", version.ref = "dagger" }

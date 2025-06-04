@@ -9,14 +9,14 @@ import dev.alejandrorosas.home.ui.Screen
 @PreviewTest
 @Preview
 @Composable
-fun HomePreview() {
+private fun HomePreview() {
     Screen(onButtonClick = {})
 }
 
 @PreviewTest
 @Preview(uiMode = Configuration.UI_MODE_NIGHT_YES)
 @Composable
-fun HomePreviewDarkMode() {
+private fun HomePreviewDarkMode() {
     Screen(onButtonClick = {})
 }
 

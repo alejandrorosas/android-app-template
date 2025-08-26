@@ -59,48 +59,48 @@ jobs:
         run: ./gradlew ktlint
 
   unit-tests:
-      runs-on: ubuntu-latest
-      steps:
-        - uses: actions/create-github-app-token@v2
-          id: app-token
-          with:
-            app-id: ${{ vars.GH_APP_ID }}
-            private-key: ${{ secrets.GH_APP_PRIVATE_KEY }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/create-github-app-token@v2
+        id: app-token
+        with:
+          app-id: ${{ vars.GH_APP_ID }}
+          private-key: ${{ secrets.GH_APP_PRIVATE_KEY }}
 
-        - uses: actions/checkout@v5
-          with:
-            token: ${{ steps.app-token.outputs.token }}
+      - uses: actions/checkout@v5
+        with:
+          token: ${{ steps.app-token.outputs.token }}
 
-        - name: Set up JDK 17
-          uses: actions/setup-java@v5
-          with:
-            distribution: temurin
-            java-version: 17
+      - name: Set up JDK 17
+        uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: 17
 
-        - name: Setup Gradle
-          uses: gradle/actions/setup-gradle@v4
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v4
 
-        - name: Unit tests
-          run: ./gradlew test
+      - name: Unit tests
+        run: ./gradlew test
 
-        - name: Screenshot tests
-          id: screenshot-tests
-          run: ./gradlew validateScreenshotTest
+      - name: Screenshot tests
+        id: screenshot-tests
+        run: ./gradlew validateScreenshotTest
 
-        - name: Update screenshots if needed
-          if: ${{ failure() && steps.screenshot-tests.outcome == 'failure' && github.event_name == 'pull_request' }}
-          run: ./gradlew updateScreenshotTest
+      - name: Update screenshots if needed
+        if: ${{ failure() && steps.screenshot-tests.outcome == 'failure' && github.event_name == 'pull_request' }}
+        run: ./gradlew updateScreenshotTest
 
-        - name: Update screenshots
-          if: ${{ failure() && steps.screenshot-tests.outcome == 'failure' && github.event_name == 'pull_request' }}
-          run: |
-            git config --local user.email "202522564+android-app-template-bot[bot]@users.noreply.github.com"
-            git config --local user.name "android-app-template-bot[bot]"
-            git fetch origin $GITHUB_HEAD_REF
-            git checkout $GITHUB_HEAD_REF
-            git add .
-            git diff-index --quiet HEAD || git commit -m "Update screenshots"
-            git push
+      - name: Update screenshots
+        if: ${{ failure() && steps.screenshot-tests.outcome == 'failure' && github.event_name == 'pull_request' }}
+        run: |
+          git config --local user.email "202522564+android-app-template-bot[bot]@users.noreply.github.com"
+          git config --local user.name "android-app-template-bot[bot]"
+          git fetch origin $GITHUB_HEAD_REF
+          git checkout $GITHUB_HEAD_REF
+          git add .
+          git diff-index --quiet HEAD || git commit -m "Update screenshots"
+          git push
 
   ui-tests:
     runs-on: ubuntu-latest

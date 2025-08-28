@@ -34,7 +34,7 @@ compose-ui-livedata = { group = "androidx.compose.runtime", name = "runtime-live
 compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
 compose-material = { group = "androidx.compose.material3", name = "material3" }
 compose-navigation = { group = "androidx.navigation", name = "navigation-compose", version = "2.9.3" }
-lifecycle-viewmodel-compose = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-compose", version = "2.9.2" }
+lifecycle-viewmodel-compose = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-compose", version = "2.9.3" }
 
 # Compose UI test
 compose-ui-test-junit = { group = "androidx.compose.ui", name = "ui-test-junit4" }

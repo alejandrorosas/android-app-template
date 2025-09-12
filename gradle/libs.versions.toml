@@ -21,7 +21,7 @@ hilt = { group = "com.google.dagger", name = "hilt-android", version.ref = "dagg
 hilt-compiler = { group = "com.google.dagger", name = "hilt-compiler", version.ref = "dagger" }
 androidx-hilt-compiler = { group = "androidx.hilt", name = "hilt-compiler", version.ref = "hiltAndroidX" }
 androidx-hilt-navigation = { group = "androidx.hilt", name = "hilt-navigation", version.ref = "hiltAndroidX" }
-androidx-hilt-navigation-compose = { group = "androidx.hilt", name = "hilt-navigation-compose", version = "1.2.0" }
+androidx-hilt-navigation-compose = { group = "androidx.hilt", name = "hilt-navigation-compose", version = "1.3.0" }
 
 junit = { group = "junit", name = "junit", version = "4.13.2" }
 androidx-test-junit = { group = "androidx.test.ext", name = "junit", version = "1.3.0" }

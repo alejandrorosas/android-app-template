@@ -8,4 +8,6 @@ android {
 
 dependencies {
     implementation project(":core")
+
+    implementation libs.compose.material.icons
 }

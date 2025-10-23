@@ -11,12 +11,6 @@ updates:
       time: "06:00"
     registries: "*"
     open-pull-requests-limit: 10
-    groups:
-      kotlin-ksp:
-        patterns:
-          - "org.jetbrains.kotlin:*"
-          - "org.jetbrains.kotlin.*"
-          - "com.google.devtools.ksp"
 registries:
   maven-google:
     type: "maven-repository"

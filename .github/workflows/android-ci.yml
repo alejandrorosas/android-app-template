@@ -34,7 +34,7 @@ jobs:
 
       - name: Upload artifact
         if: github.event_name == 'pull_request'
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         id: app-debug-apk-upload-step
         with:
           name: app-debug-apk

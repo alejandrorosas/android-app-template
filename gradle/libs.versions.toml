@@ -43,7 +43,7 @@ compose-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-mani
 screenshot-validation-api = { group = "com.android.tools.screenshot", name = "screenshot-validation-api", version.ref = "screenshot"}
 
 [plugins]
-ksp = { id = "com.google.devtools.ksp", version = "2.3.2" }
+ksp = { id = "com.google.devtools.ksp", version = "2.3.3" }
 android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
 android-library = { id = "com.android.library", version.ref = "androidGradlePlugin" }
 kotlin-gradle = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }

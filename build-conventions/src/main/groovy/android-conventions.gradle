@@ -1,5 +1,4 @@
 plugins {
-    id 'kotlin-android'
     id 'com.google.devtools.ksp'
     id 'dagger.hilt.android.plugin'
 }
@@ -23,10 +22,11 @@ android {
         sourceCompatibility JavaVersion.VERSION_17
         targetCompatibility JavaVersion.VERSION_17
     }
+}
 
-    kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_17.toString()
-    }
+// https://issuetracker.google.com/issues/476855835
+tasks.withType(AbstractTestTask).configureEach {
+    failOnNoDiscoveredTests = false
 }
 
 dependencies {

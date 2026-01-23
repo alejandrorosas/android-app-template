@@ -8,7 +8,7 @@ screenshot = "0.0.1-alpha13"
 
 [libraries]
 ktlint-cli = { group = "com.pinterest.ktlint", name = "ktlint-cli", version = "1.8.0" }
-ktlint-compose = { group = "io.nlopez.compose.rules", name = "ktlint", version = "0.5.3" }
+ktlint-compose = { group = "io.nlopez.compose.rules", name = "ktlint", version = "0.5.5" }
 
 kotlin = { group = "org.jetbrains.kotlin", name = "kotlin-stdlib", version.ref = "kotlin" }
 appcompat = { group = "androidx.appcompat", name = "appcompat", version = "1.7.1" }

@@ -21,3 +21,6 @@ jobs:
 
       - name: Generate and submit dependency graph
         uses: gradle/actions/dependency-submission@v5
+        with:
+          dependency-resolution-task: "app:dependencies"
+          additional-arguments: "--configuration releaseRuntimeClasspath"

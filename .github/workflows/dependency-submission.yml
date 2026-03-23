@@ -20,7 +20,7 @@ jobs:
           java-version: 17
 
       - name: Generate and submit dependency graph
-        uses: gradle/actions/dependency-submission@v5
+        uses: gradle/actions/dependency-submission@v6
         with:
           dependency-resolution-task: "app:dependencies"
           additional-arguments: "--configuration releaseRuntimeClasspath"

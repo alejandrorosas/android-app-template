@@ -11,6 +11,8 @@ updates:
       time: "06:00"
     registries: "*"
     open-pull-requests-limit: 10
+    ignore:
+      - dependency-name: "gradle-wrapper"
 registries:
   maven-google:
     type: "maven-repository"

@@ -1,5 +1,5 @@
 [versions]
-androidGradlePlugin = "9.2.0"
+androidGradlePlugin = "9.2.1"
 kotlin = "2.3.21"
 dagger = "2.59.2"
 androidxComposeBom = "2026.04.01"

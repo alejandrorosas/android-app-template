@@ -4,10 +4,12 @@ plugins {
     alias libs.plugins.android.library apply false
     alias libs.plugins.kotlin.gradle apply false
     alias libs.plugins.dagger.hilt apply false
-    alias(libs.plugins.compose.compiler) apply false
+    alias libs.plugins.compose.compiler apply false
     alias libs.plugins.compose.screenshot apply false
 }
 
 subprojects {
+    if (!project.buildFile.exists()) return // Skip intermediate projects without physical build file
+
     apply from: "$rootDir/ktlint.gradle"
 }

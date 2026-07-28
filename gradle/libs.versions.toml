@@ -4,7 +4,7 @@ kotlin = "2.4.10"
 dagger = "2.60.1"
 androidxComposeBom = "2026.06.01"
 hiltAndroidX = "1.4.0"
-screenshot = "0.0.1-alpha15"
+screenshot = "0.0.1-alpha16"
 
 [libraries]
 ktlint-cli = { group = "com.pinterest.ktlint", name = "ktlint-cli", version = "1.8.0" }

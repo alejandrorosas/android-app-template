@@ -2,7 +2,7 @@
 androidGradlePlugin = "9.3.1"
 kotlin = "2.4.10"
 dagger = "2.60.1"
-androidxComposeBom = "2026.06.01"
+androidxComposeBom = "2026.08.00"
 hiltAndroidX = "1.4.0"
 screenshot = "0.0.1-alpha16"
 

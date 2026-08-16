@@ -11,7 +11,7 @@ ktlint-cli = { group = "com.pinterest.ktlint", name = "ktlint-cli", version = "1
 ktlint-compose = { group = "io.nlopez.compose.rules", name = "ktlint", version = "0.6.4" }
 
 kotlin = { group = "org.jetbrains.kotlin", name = "kotlin-stdlib", version.ref = "kotlin" }
-appcompat = { group = "androidx.appcompat", name = "appcompat", version = "1.7.1" }
+appcompat = { group = "androidx.appcompat", name = "appcompat", version = "1.8.0" }
 dagger = { group = "com.google.dagger", name = "dagger", version.ref = "dagger" }
 dagger-compiler = { group = "com.google.dagger", name = "dagger-compiler", version.ref = "dagger" }
 androidx-core = { group = "androidx.core", name = "core-ktx", version = "1.19.0" }
